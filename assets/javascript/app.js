@@ -5,8 +5,8 @@ var firebaseConfig = {
     projectId: "movies-e2552",
     storageBucket: "movies-e2552.appspot.com",
     messagingSenderId: "523726796586",
-    appId: "1:523726796586:web:f3a91f0c770b9b4e8f1053",
-    measurementId: "G-CFC9ESDZYL"
+    appId: "1:523726796586:web:b7702e05f705ef0e8f1053",
+    measurementId: "G-YMS5HG79LZ"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
