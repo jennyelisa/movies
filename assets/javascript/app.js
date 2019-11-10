@@ -10,7 +10,6 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
 
   var database = firebase.database();
 
@@ -18,12 +17,12 @@ var firebaseConfig = {
       event.preventDefault(); 
 
       let mName = $("#movie-name").val().trim();
-      let type = $("#movie-type").val().trim();
+      let mtype = $("#movie-type").val().trim();
 
 
       var newMovie = {
           name: mName,
-          type: type,
+          type: mtype,
       };
 
       database.ref().push(newMovie);
@@ -42,12 +41,12 @@ var firebaseConfig = {
       console.log(childSnapshot.val());
 
       var mName = childSnapshot.val().name;
-      var type = childSnapshot.val().type;
+      var mtype = childSnapshot.val().type;
 
 
     var newRow = $("<tr>").append (
         $("<td>").text(mName),
-        $("<td>").text(type)
+        $("<td>").text(mtype)
     );
 
     $("#movie-list tbody").append(newRow);
